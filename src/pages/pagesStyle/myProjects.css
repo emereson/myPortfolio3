@@ -1,15 +1,17 @@
 .myProjects__container {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   overflow: hidden;
+  overflow-y: auto;
   padding: 1em;
   animation-play-state: running;
   animation: Animate 1.5s linear alternate;
+  gap: 2em;
 }
 
 .myProjects__Animation {
@@ -37,51 +39,151 @@
     0 0.1em 0.4em rgb(0, 189, 189);
   z-index: 5;
 }
-.myProjectSlider__container {
-  position: relative;
-  width: 80%;
-  max-width: 1200px;
-  height: 100%;
-  max-height: 300px;
-  z-index: 8;
+.projects__informationProjects {
+  z-index: 5;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  gap: 2em;
 }
-
-.myProjectSlider__imgContainer {
-  position: absolute;
-  width: 25%;
-  min-width: 250px;
-  height: 100%;
-  min-height: 280px;
-  overflow: hidden;
-  border-radius: 0.8em;
-  box-shadow: 0em 0.3em 1em 0.3em rgba(0, 76, 78, 0.851),
-    0em -0.5em 1em 0.3em rgba(65, 0, 135, 0.706);
-  transition: transform 0.8s ease;
-}
-
-.myProjectSlider__imgContainer img {
+.projects__oneProjects {
+  position: relative;
   width: 100%;
-  height: 100%;
+  max-width: 24em;
+  height: auto;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  background-color: rgb(11, 8, 26);
+  border-radius: 1em;
+  padding-bottom: 3em;
 }
 
-.myProjectSlider__imgContainer span {
-  top: 0;
+.oneProjects2 {
+  transform: translateX(-100%);
+}
+
+.oneProjects3 {
+  transform: translateX(-200%);
+}
+
+.projects__oneProjects img {
+  width: 100%;
+  height: 13.5em;
+  border-radius: 0.5em;
+}
+
+.projects__oneProjects h3 {
+  font-size: 1.6em;
+  width: 100%;
+  font-weight: 500;
+  color: #8938da;
+}
+.projects__oneProjects p {
+  margin-top: -1em;
+  font-size: 0.7em;
+  font-weight: 200;
+  color: #8154ae;
+}
+
+.projects__oneProjects ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.projects__oneProjects li {
+  font-size: 0.8em;
+  font-weight: 200;
+  color: #5fbabc;
+}
+
+.projects__gitHub {
+  position: absolute;
+  width: 3.5em;
+  height: 3.5em;
+  top: 0.5em;
+  right: 0.5em;
+  z-index: 5;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.841);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  transition: 0.5s;
+}
+
+.projects__gitHub:hover {
+  background-color: rgba(255, 255, 255, 0.842);
+  color: black;
+  transition: 0.5s;
+}
+.projects__gitHub i {
+  font-size: 2em;
+}
+
+.projects_link {
+  position: absolute;
+  bottom: 1.5em;
+  color: #e42a52;
+  cursor: pointer;
+}
+
+.projects_link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
   left: 0;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 3;
-  background: rgba(0, 0, 0, 0.416);
-  cursor: pointer;
-  transition: 1s;
+  height: 2px;
+  background-color: #6f0ad4;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
 }
 
-.myProjectSlider__imgContainer span:hover {
-  background-color: rgba(0, 0, 0, 0);
-  transition: 0.4s;
+.projects_link:hover::after {
+  transform: scaleX(1);
+}
+
+.projects_link:hover {
+  color: #6f0ad4;
+  text-shadow: 0em 0.2em 0.5em #7c1cdc;
+  transition: 0.5s;
+}
+
+.project__imageQr {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.789);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+}
+
+.project__imageQr img {
+  width: 300px;
+  height: 300px;
+}
+
+.project__imageQr p {
+  cursor: pointer;
+  font-size: 1.8em;
+  color: #e42a52;
+}
+
+.project__imageQr p:hover {
+  color: #00fbff;
 }
 
 .portal__contianer {
@@ -131,11 +233,7 @@
 
 @media (max-width: 850px) {
   .myProjects__container {
-    height: 100%;
     padding-top: 6em;
-    overflow: hidden;
-    overflow-y: auto;
-    justify-content: start;
   }
   .myProjects__container h2 {
     margin: 0;
@@ -171,11 +269,7 @@
 
 @media (max-height: 650px) {
   .myProjects__container {
-    height: 100%;
     padding-top: 6em;
-    overflow: hidden;
-    overflow-y: auto;
-    justify-content: start;
   }
   .myProjects__container h2 {
     margin: 0;

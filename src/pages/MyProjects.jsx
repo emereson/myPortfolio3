@@ -13,7 +13,7 @@ const MyProjects = ({ pagetranslate, setpagetranslate }) => {
       }
     >
       <h2>Mis Proyectos</h2>
-      <MyProjectSlider />
+      <MyProjectSlider pagetranslate={pagetranslate} />
       <div className="myProjects__canvas">
         <Canvas shadows camera={{ position: [0, 0, 10], fov: 30 }}>
           <BackMyProjects />
