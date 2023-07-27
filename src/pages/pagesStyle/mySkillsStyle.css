@@ -236,13 +236,13 @@
   transition: 0.5s;
 }
 
-@media (max-width: 850px) and (max-height: 700px) {
+@media (max-width: 850px) {
   .mySkills__container {
     height: 100%;
     min-height: 100vh;
     overflow: hidden;
-    overflow-y: auto;
-    padding-top: 5em;
+    overflow-y: scroll;
+    padding-top: 6em;
     justify-content: start;
   }
   .mySkills__container img {
