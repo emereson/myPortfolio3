@@ -31,7 +31,7 @@
     90deg,
     rgba(38, 0, 99, 0.434),
     rgba(81, 0, 0, 0.744)
-  );
+  ) !important;
 }
 .headerContainer__ul2 {
   box-shadow: -0.4em 0 1em 0.1em rgba(177, 0, 230, 0.691),
@@ -40,7 +40,7 @@
     35deg,
     rgba(70, 0, 81, 0.744),
     rgba(38, 0, 99, 0.806)
-  );
+  ) !important;
 }
 
 .headerContainer__ul3 {
@@ -50,7 +50,7 @@
     35deg,
     rgba(0, 73, 81, 0.867),
     rgba(46, 0, 99, 0.842)
-  );
+  ) !important ;
 }
 .header__contianer li {
   position: relative;
