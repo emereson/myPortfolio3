@@ -123,10 +123,10 @@
 
 .groot__container {
   position: absolute;
-  bottom: 0;
+  bottom: 36%;
   z-index: 4;
-  width: 10em;
-  height: 10em;
+  width: 15em;
+  height: 15em;
   max-height: 950px;
 }
 
@@ -159,6 +159,9 @@
   .groot__container {
     position: relative;
     margin-bottom: -5.5em;
+    width: 10em;
+    height: 10em;
+    bottom: 0;
   }
 }
 
@@ -180,5 +183,8 @@
   .groot__container {
     position: relative;
     margin-bottom: -5.5em;
+    width: 10em;
+    height: 10em;
+    bottom: 0;
   }
 }
