@@ -12,6 +12,15 @@
   z-index: 60;
   animation: animate 1.5s linear alternate;
   animation-play-state: running; /* La animación se inicia en pausa */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.pageAnimations img {
+  width: auto;
+  height: 50%;
+  margin-right: -3em;
+  opacity: 0.6;
 }
 
 @keyframes animate {
