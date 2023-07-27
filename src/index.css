@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(21, 0, 37);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #00a3b8;
+  border-radius: 5px;
+}
+
+body {
+  margin: 0;
+  font-family: "Zilla Slab", serif;
+  background-color: rgb(0, 0, 0);
+  letter-spacing: 0.5px;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+li,
+:link {
+  list-style: none;
+  padding-left: 0;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 20%;
+  margin: 0;
+}
+
+input {
+  outline: none;
+  font-family: inherit;
+}
+
+button {
+  border: none;
+}
+
+.loaderPage__container {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg, rgb(4, 0, 16), rgb(13, 7, 36));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: 1s;
+}
+
+.close__loader {
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  z-index: -100;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg, rgb(4, 0, 16), rgb(13, 7, 36));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+
+.loaderPage__container span,
+.close__loader span {
+  color: rgb(0, 206, 213);
+  font-size: 2.3em;
+  font-weight: 800;
+  padding: 0.5em;
+  animation: loadingEffect 1s infinite;
+}
+
+@keyframes loadingEffect {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,47 @@
+.app__container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+}
+
+.pageAnimations {
+  height: 100%;
+  background: linear-gradient(90deg, rgb(4, 0, 16), rgb(13, 7, 36));
+  z-index: 10;
+  animation: animate 1.5s linear alternate;
+  animation-play-state: running; /* La animación se inicia en pausa */
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  15% {
+    width: 100vw;
+    box-shadow: 0 0 3em 2em rgb(72, 0, 72);
+  }
+  50% {
+    width: 100vw;
+    box-shadow: 0 0 3em 2em rgb(72, 0, 72);
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes Animate {
+  0% {
+    transform: translateX(100%);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
