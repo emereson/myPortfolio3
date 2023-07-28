@@ -25,9 +25,7 @@ function App() {
         setpagetranslate={setpagetranslate}
         pagetranslate={pagetranslate}
       />
-      <div className={animationStarted ? "pageAnimations" : ""}>
-        <img src="/imgTransalte.png" alt="" />
-      </div>
+      <div className={animationStarted ? "pageAnimations" : ""}></div>
       <Home pagetranslate={pagetranslate} setpagetranslate={setpagetranslate} />
       <Aboutme
         pagetranslate={pagetranslate}
